@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const encodedSegments = ["MjYz", "NA=="];
-
+const sisteTall = 4;
 export const Comp = () => {
   const [message, setMessage] = useState("Skriv inn kode");
   const [enteredCode, setEnteredCode] = useState("");
@@ -104,7 +104,7 @@ export const Comp = () => {
         </div>
       )}
 
-      <script src="sistetaller4.js"></script>
+      <script src="Siste-tall-har-sitt-eget-tall-i-antall-bokstaver.js"></script>
     </div>
   );
 };

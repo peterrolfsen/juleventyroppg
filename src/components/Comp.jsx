@@ -43,6 +43,7 @@ export const Comp = () => {
 
   return (
     <div id="spm3">
+      <h1 id="title">Ran safen!</h1>
       <div className="smart-lock">
         <div id="lock-display" className="display">
           {message}

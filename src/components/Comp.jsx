@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./globals.css";
 
 const encodedSegments = ["MjYz", "NA=="];
 

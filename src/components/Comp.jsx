@@ -103,8 +103,6 @@ export const Comp = () => {
           <img src="/Images/opensafe.png" alt="Successful Code Entry" />
         </div>
       )}
-
-      <script src="Siste-tall-har-sitt-eget-tall-i-antall-bokstaver.js"></script>
     </div>
   );
 };

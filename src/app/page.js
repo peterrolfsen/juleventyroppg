@@ -1,5 +1,5 @@
 "use client";
-import Comp from "./Comp";
+import Comp from "./comp";
 
 export default function Home() {
   return (

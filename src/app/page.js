@@ -1,6 +1,6 @@
 "use client";
 
-import Comp from "./comp";
+import Comp from "./Comp";
 export default function Home() {
   return (
     <main className="main">
@@ -8,5 +8,3 @@ export default function Home() {
     </main>
   );
 }
-
-

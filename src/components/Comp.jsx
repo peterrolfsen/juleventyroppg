@@ -105,6 +105,12 @@ export const Comp = () => {
       {isCodeCorrect && (
         <div className="image-container">
           <img src="/Images/opensafe.png" alt="Successful Code Entry" />
+          <button
+            id="nesteOppgave"
+            href="https://et-frontend-juleeventyr-2023-retro.vercel.app/"
+          >
+            https://et-frontend-juleeventyr-2023-retro.vercel.app/
+          </button>
         </div>
       )}
     </div>

@@ -70,3 +70,13 @@ body {
   position: absolute;
   top: 60px;
 }
+
+.image-container {
+  img {
+    z-index: 2;
+  }
+}
+
+#nesteOppgave {
+  display: none;
+}

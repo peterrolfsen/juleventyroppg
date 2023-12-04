@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const encodedSegments = ["MjYz", "NA=="];
-const sisteTall = 4;
+
 export const Comp = () => {
   const [message, setMessage] = useState("Skriv inn kode");
   const [enteredCode, setEnteredCode] = useState("");

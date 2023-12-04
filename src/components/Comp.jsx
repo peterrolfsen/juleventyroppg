@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./globals.css";
+import "./comp.css";
 
 const encodedSegments = ["MjYz", "NA=="];
 
@@ -24,6 +24,9 @@ export const Comp = () => {
   };
 
   const checkCode = () => {
+    console.log(
+      "Første tall: Hvor mange hjemme alene filmer spilte Macaulay Culkin i?"
+    );
     const isCorrect =
       enteredCode.length === 4 &&
       encodedSegments.every((segment, index) => {

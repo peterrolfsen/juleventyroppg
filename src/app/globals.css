@@ -1,3 +1,6 @@
+body {
+  background-color: black;
+}
 .display {
   background-color: #222;
   color: #0f0;
@@ -51,7 +54,7 @@
   margin: 0;
   content: "vise menn";
   background-image: url("/Images/hus.png");
-  background-size: cover;
+
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;

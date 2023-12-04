@@ -5,6 +5,7 @@ const encodedSegments = ["MjYz", "NA=="];
 export const Comp = () => {
   const [message, setMessage] = useState("Skriv inn kode");
   const [enteredCode, setEnteredCode] = useState("");
+  const [isCodeCorrect, setIsCodeCorrect] = useState(false); // New state variable for image visibility
 
   const updateDisplay = (newMessage) => {
     setMessage(newMessage);
@@ -12,6 +13,7 @@ export const Comp = () => {
 
   const clearDisplay = () => {
     setEnteredCode("");
+    setIsCodeCorrect(false); // Hide the image when display is cleared
     updateDisplay("Skriv inn kode");
   };
 
@@ -21,10 +23,6 @@ export const Comp = () => {
   };
 
   const checkCode = () => {
-    console.log(
-      "første tall: Hvor mange hjemme alene filmer spilte Macaulay Culkin i?"
-    );
-    // Dynamic checking
     const isCorrect =
       enteredCode.length === 4 &&
       encodedSegments.every((segment, index) => {
@@ -33,6 +31,7 @@ export const Comp = () => {
       });
 
     if (isCorrect) {
+      setIsCodeCorrect(true); // Set the state to true to display the image
       updateDisplay("Åpen!");
     } else {
       updateDisplay("Feil kode!");
@@ -98,6 +97,11 @@ export const Comp = () => {
           </div>
         </div>
       </div>
+      {isCodeCorrect && (
+        <div className="image-container">
+          <img src="/Images/opensafe.png" alt="Successful Code Entry" />
+        </div>
+      )}
 
       <script src="sistetaller4.js"></script>
     </div>

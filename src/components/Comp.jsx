@@ -42,9 +42,8 @@ export const Comp = () => {
     return decodedUrl;
   }
 
-
   const checkCode = () => {
-    console.log("Første tall: Hvor mange S er det i Sopra Steria?");
+    console.log("Første tall: Antall siffer i koden delt på 2");
     const isCorrect =
       enteredCode.length === 4 &&
       encodedSegments.every((segment, index) => {
@@ -73,8 +72,7 @@ export const Comp = () => {
         </div>
         <div
           className="number-pad"
-          id="andre-tall: Antall siffer i koden delt på 2."
-
+          id="andre-tall: sifferets posisjon ganger 3."
         >
           <div className="row">
             <button className="key" onClick={() => pressKey(1)}>

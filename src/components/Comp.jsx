@@ -72,7 +72,7 @@ export const Comp = () => {
         </div>
         <div
           className="number-pad"
-          id="andre-tall: sifferets posisjon delt på 2."
+          id="andre-tall: sifferets posisjon ganger 3."
         >
           <div className="row">
             <button className="key" onClick={() => pressKey(1)}>

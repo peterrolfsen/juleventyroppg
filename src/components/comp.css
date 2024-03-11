@@ -52,12 +52,11 @@ body {
 
 #spm3 {
   margin: 0;
-  content: "tredje tall: vise menn";
-  background-image: url("/Images/hus.png");
+  content: "tredje tall: Antall overordnede avdelinger i Sopra Steria";
+  background-image: url("/Images/25.jpeg");
 
-  background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-size: contain;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -72,8 +71,10 @@ body {
 }
 
 .image-container {
-  img {
-    z-index: 2;
+  z-index: 2;
+  text-align: center;
+  h1 {
+    color: white;
   }
 }
 

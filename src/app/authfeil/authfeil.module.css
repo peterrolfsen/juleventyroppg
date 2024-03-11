@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: space-evenly;
+  min-height: 200px;
+  padding: 3rem 0rem;
+}
+
+.container code {
+  font-size: 1.5rem;
+}
+
+.heading {
+  padding: 0px;
+  margin: 0px;
+}

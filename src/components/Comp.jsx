@@ -7,6 +7,9 @@ export const Comp = () => {
   const [message, setMessage] = useState("Skriv inn kode");
   const [enteredCode, setEnteredCode] = useState("");
   const [isCodeCorrect, setIsCodeCorrect] = useState(false); // New state variable for image visibility
+  const [encodedLink, setEncodedLink] = useState(
+    "aHR0cHM6Ly9ldC1mcm9udGVuZC1qdWxlZXZlbnR5ci0yMDIzLXJldHJvLnZlcmNlbC5hcHAv"
+  );
 
   const updateDisplay = (newMessage) => {
     setMessage(newMessage);
@@ -23,10 +26,25 @@ export const Comp = () => {
     updateDisplay(enteredCode + key);
   };
 
-  const checkCode = () => {
-    console.log(
-      "Første tall: Hvor mange hjemme alene filmer spilte Macaulay Culkin i?"
+  function decodeBase64Url(encodedUrl) {
+    // Replace URL-specific base64 chars to standard base64 chars
+    const base64 = encodedUrl.replace(/-/g, "+").replace(/_/g, "/");
+    // Decode the base64 string
+    const decodedUrl = decodeURIComponent(
+      atob(base64)
+        .split("")
+        .map(function (c) {
+          // Convert each character to a '%' followed by the character's Unicode value in hexadecimal
+          return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
+        })
+        .join("")
     );
+    return decodedUrl;
+  }
+
+  const checkCode = () => {
+    console.log("Første tall: Hvor mange S er det i Sopra Steria?");
+    console.log(encodedLink);
     const isCorrect =
       enteredCode.length === 4 &&
       encodedSegments.every((segment, index) => {
@@ -37,6 +55,7 @@ export const Comp = () => {
     if (isCorrect) {
       setIsCodeCorrect(true); // Set the state to true to display the image
       updateDisplay("Åpen!");
+      setEncodedLink(decodeBase64Url(encodedLink));
     } else {
       updateDisplay("Feil kode!");
       setTimeout(() => {
@@ -47,14 +66,14 @@ export const Comp = () => {
 
   return (
     <div id="spm3">
-      <h1 id="title">Ran safen!</h1>
+      <h1 id="title">Kom deg inn!</h1>
       <div className="smart-lock">
         <div id="lock-display" className="display">
           {message}
         </div>
         <div
           className="number-pad"
-          id="andre-tall: hvor mange hjemme alene filmer er det?"
+          id="andre-tall: Antall siffer i koden delt på 2."
         >
           <div className="row">
             <button className="key" onClick={() => pressKey(1)}>
@@ -104,12 +123,13 @@ export const Comp = () => {
       </div>
       {isCodeCorrect && (
         <div className="image-container">
-          <img src="/Images/opensafe.png" alt="Successful Code Entry" />
-          <button
-            id="nesteOppgave"
-            href="https://et-frontend-juleeventyr-2023-retro.vercel.app/"
-          >
-            https://et-frontend-juleeventyr-2023-retro.vercel.app/
+          <img src="/Images/kjell.jpeg" alt="Successful Code Entry" />
+          <h1>
+            Hei, mitt navn er Kjell. Jeg driver denne sjappa. Velkommen inn til
+            oss!
+          </h1>
+          <button id="nesteOppgave" href={encodedLink}>
+            {encodedLink}
           </button>
         </div>
       )}

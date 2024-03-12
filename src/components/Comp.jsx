@@ -8,7 +8,7 @@ export const Comp = () => {
   const [enteredCode, setEnteredCode] = useState("");
   const [isCodeCorrect, setIsCodeCorrect] = useState(false); // New state variable for image visibility
   const [encodedLink, setEncodedLink] = useState(
-    "aHR0cHM6Ly9ldC1mcm9udGVuZC1qdWxlZXZlbnR5ci0yMDIzLXJldHJvLnZlcmNlbC5hcHAv"
+    "aHR0cHM6Ly9wYXNrZXR2LTIwMjQtY2VlZGM4MDFjMmQ3Lmhlcm9rdWFwcC5jb20v"
   );
 
   const updateDisplay = (newMessage) => {
